@@ -1,0 +1,230 @@
+@charset="utf-8";
+/*
+Author: Ryan Storm
+Color picker: http://www.colorhexa.com
+*/
+body {
+    
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 15px;
+  background-color: #40ff95;
+  
+
+}
+
+#center {
+    width:200px;
+    height:200px;
+    border-radius:100px;
+    background: black;
+    position:absolute;
+    left:200px;
+    top:100px;
+    //visibility: hidden;
+}
+
+.point {
+    width:24px;
+    height:24px;
+    border-radius:12px;
+    background: blue;
+    position:absolute;
+
+}
+
+.canvas1 {
+    position: absolute;
+    margin-top: 196px;
+    margin-left: 20px;
+    transform: rotate(-20deg);
+}
+
+.canvas2 {
+    position: absolute;
+    margin-top: 180px;
+    margin-left: 400px;
+    transform: rotate(310deg);
+}
+
+.square1 { 
+    position: absolute;
+    width: 100px; 
+    height: 100px; 
+    background: #aaff40; 
+    margin-left: 20px; 
+    margin-top: 20px;
+}
+
+.square2 { 
+    position: absolute;
+    width: 100px; 
+    height: 100px; 
+    background: #aaff40; 
+    margin-left: 130px; 
+    margin-top: 20px;
+}
+
+.square3 { 
+    position: absolute;
+    width: 100px; 
+    height: 100px; 
+    background: #aaff40; 
+    margin-left: 240px; 
+    margin-top: 20px;
+}
+
+.square4 {
+    position: absolute;
+    width: 100px; 
+    height: 100px; 
+    background: #aaff40; 
+    margin-left: 1000px;
+    margin-top: 410px;
+}
+
+.nextPage {
+
+    position: absolute;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 35px;
+    color: #d3aa4f;
+    text-shadow: 0px 2px 3px #555;
+    font-style: groove;
+    font-weight: 900;
+
+    margin-top: 440px;
+    margin-left: 1028px;
+    visibility: visible;
+}
+
+.rc {
+
+    position: absolute;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 35px;
+    color: #d3aa4f;
+    text-shadow: 0px 2px 3px #555;
+    font-style: groove;
+    font-weight: 900;
+
+    margin-top: 50px;
+    margin-left: 48px;
+    visibility: visible;
+}
+
+.bh {
+
+    position: absolute;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 35px;
+    color: #d3aa4f;
+    
+    text-shadow: 0px 2px 3px #555;
+    font-style: groove;
+    font-weight: 900;
+
+    margin-top: 50px;
+    margin-left: 154px;
+    visibility: visible;
+}
+
+.h {
+    position: absolute;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 35px;
+    color: #d3aa4f;
+    
+    text-shadow: 0px 2px 3px #555;
+    font-style: groove;
+    font-weight: 900;
+
+    margin-top: 50px;
+    margin-left: 274px;
+    visibility: visible;
+}
+
+.primitiveTitle {
+    position: absolute;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    color: #696969;
+
+    margin-top: 60px;
+    margin-left: 800px;
+}
+
+.divider1 {
+    /*Partly taken from cse website*/
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 780px;
+    margin-right: 100px;
+
+    width: 380px;
+
+    border-top-width: 5px;
+
+    border-top-style: solid;
+
+    border-top-color: #696969;
+}
+
+.divider2 {
+  /*Partly taken from cse website*/
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 780px;
+    margin-right: 100px;
+
+    width: 380px;
+
+    border-top-width: 2px;
+
+    border-top-style: solid;
+
+    border-top-color: #696969;
+}
+
+.divider3 {
+  /*Partly taken from cse website*/
+    position: absolute;
+    margin-top: 355px;
+    margin-left: 780px;
+    margin-right: 100px;
+
+    width: 380px;
+
+    border-top-width: 2px;
+
+    border-top-style: solid;
+
+    border-top-color: #696969;
+}
+
+.primitiveText {
+    position: absolute;
+    word-wrap: break-word;
+    width: 362px;
+ 
+    margin-top: 130px;
+    margin-left: 800px;
+    margin-right: 200px;
+    line-height: 200%;
+
+    color: #696969;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.highlight:hover {
+    color: #40ff95;
+}
+
+p {
+
+}
+

@@ -1,0 +1,122 @@
+var items = 26;
+for(var i = 0; i < items; i++) {
+
+    var x = 100 - 12 + 124 * Math.cos(2 * Math.PI * i / items);
+    var y = 100 - 12 + 124 * Math.sin(2 * Math.PI * i / items);   
+    $("#center").append("<div class='point' style='left:"+ x +"px;top:"+ y +"px'></div>");    
+
+}
+
+#center {
+    width:200px;
+    height:200px;
+    border-radius:100px;
+    background: black;
+    position:relative;
+    left:200px;
+    top:100px;
+}
+
+.point {
+    width:24px;
+    height:24px;
+    border-radius:12px;
+    background: blue;
+    position:absolute;
+}
+
+<div id="center"></div>
+
+// To get the points to be on the outer edge of center circle : 
+	
+Set their diameter to the value of the circumference of the large circle divided by the number of small circles. 
+
+///////////////////////////////// Another way without jquery
+
+var centerX = 200,
+    centerY = 200,
+    radius  = 100,
+    width   = 15
+
+function draw()
+    {
+      var ctx = document.getElementById( 'canvas' ).getContext( '2d' );
+      var angle;
+      
+      for ( var i = 0; i < 180; i+=3 )
+      {
+        angle = 2.1 + (i * Math.PI / 90);
+        ctx.beginPath();
+        ctx.moveTo(
+          centerX + Math.sin( angle ) * radius,
+          centerY + Math.cos( angle ) * radius
+        );
+        ctx.lineTo(
+          centerX + Math.sin( angle ) * (radius + width),
+          centerY + Math.cos( angle ) * (radius + width)
+        );
+        ctx.closePath();
+        ctx.stroke();
+      }
+    }
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>JS Bin</title>
+</head>
+<body onload="draw()">
+  <h1>Test</h1>
+  <canvas id="canvas" width="400" height="400"></canvas>
+</body>
+</html>
+/////////////////////////////////////////////////
+
+////////// Accessing elements in array for coordinates
+coords[0] == 3   // x value (even indexes)
+coords[1] == 5   // y value (odd indexes)
+
+// to loop through coordinate values
+for (var i = 0; i < coords.length; i+=2) {
+    var x = coords[i];
+    var y = coords[i+1];
+} 
+////////////////////////
+
+///////////////////////// Spiral effect referenced from http://stackoverflow.com/questions/16286900/making-a-spinning-spiral
+
+<canvas id="myCanvas" width="300" height="300"></canvas>
+
+function DrawSpiral(mod) {
+    var c = document.getElementById("myCanvas");
+    var cxt = c.getContext("2d");
+    var centerX = 150;
+    var centerY = 150;
+
+    cxt.save();
+    cxt.clearRect(0, 0, c.width, c.height);
+
+    cxt.beginPath();
+    cxt.moveTo(centerX, centerY);
+
+    var STEPS_PER_ROTATION = 60;
+    var increment = 2 * Math.PI / STEPS_PER_ROTATION;
+    var theta = increment;
+
+    while (theta < 40 * Math.PI) {
+        var newX = centerX + theta * Math.cos(theta - mod);
+        var newY = centerY + theta * Math.sin(theta - mod);
+        cxt.lineTo(newX, newY);
+        theta = theta + increment;
+    }
+    cxt.stroke();
+    cxt.restore();
+}
+
+var counter = 0;
+setInterval(function () {
+    DrawSpiral(counter);
+    counter += 0.075;
+}, 10);
+//////////////////////////////

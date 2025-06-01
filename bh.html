@@ -1,0 +1,32 @@
+<!--
+AUTHOR: Ryan Storm
+Reference: http://stackoverflow.com/questions/16286900/making-a-spinning-spiral
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Black Hole</title>
+	<script type = "text/javascript" >
+	    function preventBack(){window.history.forward();}
+	    setTimeout("preventBack()", 0);
+	    window.onunload=function(){null};
+	</script>
+	<script src="bh.js"></script>
+	<link href="reset.css" rel="stylesheet" type="text/css"/>
+	<link href="bh.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<h2></h2>
+	<div class="bhMessage">If your back button is disabled, you are truly in the Black Hole!</div>
+	<canvas id="myCanvas" class="canvas" width="1155" height="620"></canvas>
+	
+	<audio autoplay="autoplay" loop src="audio/thecryofblackhole.mp3">
+	  Your browser does not support the audio element.
+	</audio> 
+
+</body>
+</html>

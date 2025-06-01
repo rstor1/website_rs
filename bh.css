@@ -1,0 +1,44 @@
+@charset="utf-8";
+
+/*
+AUTHOR: Ryan Storm
+Some reference for styles/colors: http://www.color-hex.com/
+http://colorschemedesigner.com/csd-3.5/
+*/
+
+
+body {
+    
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 15px;
+  background-color: #000000;
+
+}
+
+h2 {
+	color: #FFFFFF;
+}
+
+.canvas {
+	position: absolute;
+
+    color: #FFFFFF;
+
+
+    margin-top: 20px;
+    margin-left: 20px;
+    visibility: visible;
+}
+
+.bhMessage {
+	position: absolute;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 35px;
+    color: #272727;
+    font-weight: 900;
+
+    text-shadow: 0px 2px 3px #555;
+    font-style: groove;
+    margin-top: 290px;
+    margin-left: 50px;
+}
